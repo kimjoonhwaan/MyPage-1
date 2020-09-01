@@ -76,7 +76,7 @@ public class MyPageViewHandler {
         try {
             if (reservationCompleted.isMe()) {
                 // view 객체 조회
-                List<MyPage> myPageList = myPageRepository.findByScreeningId(reservationCompleted.getId());
+                List<MyPage> myPageList = myPageRepository.findByScreeningId(reservationCompleted.getScreeningId());
                 for (MyPage myPage : myPageList) {
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     myPage.setStatus(reservationCompleted.getStatus());
